@@ -1,4 +1,5 @@
-
+# What is this?
+A web app that is supposed to track and visualize Covid-19 Data, created as a class assignment.
 
 # Backend (FooBackBar)
 
