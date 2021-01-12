@@ -1,0 +1,21 @@
+{
+  "Summary.Total": "Bestätigte Fälle:",
+  "Summary.Death": "Tode:",
+  "Summary.Recovered": "Erholt:",
+  "Summary.Title": "COVID-19 Tracker",
+  "Navigation.TableView": "Details",
+  "Navigation.Home": "Start",
+  "Navigation.Map": "Karte",
+  "Navigation.Game": "Spiel",
+  "Navigation.Language.German": "DE",
+  "Navigation.Language.English": "EN",
+  "Details.Country": "Land",
+  "Details.Total": "Bestätigt",
+  "Details.Recovered": "Erholt",
+  "Details.Death": "Tode",
+  "Details.Active": "Aktiv",
+  "Chart.Death": "Tode pro Tag",
+  "Chart.Recovered": "Erholte Fälle pro Tag",
+  "Chart.Active": "Aktive Fälle pro Tag",
+  "Chart.Total": "Gesamt Fälle über Zeit"
+}

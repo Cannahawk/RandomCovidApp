@@ -1,0 +1,19 @@
+<div class="chart">
+  <!-- <h1 [resource]="titleResource"></h1> -->
+  <h1>{{title}}</h1>
+  <div class="chart-container">
+    <canvas 
+      baseChart
+      [title]="title"
+      [datasets]="lineChartData" 
+      [labels]="lineChartLabels" 
+      [options]="lineChartOptions"
+      [colors]="lineChartColors" 
+      [legend]="lineChartLegend" 
+      [chartType]="lineChartType" 
+      [plugins]="lineChartPlugins"
+      responsive="true"
+      maintainAspectRatio="true">
+    </canvas>
+  </div>
+</div>

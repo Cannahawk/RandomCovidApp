@@ -1,0 +1,53 @@
+.flex {
+  display: flex;
+
+  .flex-item, &.flex-span > span, &.flex-div > div {
+    flex: 1;
+  }
+
+  &.flex-center {
+    text-align: center;
+    height: 100vh - 40px;
+    align-items: center;
+  }
+
+  &.flex-horizontal {
+    flex-direction: r;
+  }
+
+  &.flex-row {
+    flex-direction: row;
+  }
+
+  &.flex-column {
+    flex-direction: column;
+  }
+}
+
+.number {
+  text-align: right;
+}
+
+table {
+  thead {
+    th{
+      background-color: lightgray;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #44CC44;
+      }
+
+      &:nth-child(odd) {
+        background-color: greenyellow;
+      }
+    }
+  }
+}
+
+div.loading {
+
+}

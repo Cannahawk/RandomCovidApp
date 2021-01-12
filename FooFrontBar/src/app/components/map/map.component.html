@@ -1,0 +1,18 @@
+<div class="flex flex-center">
+  <loader [loading]='!countries' style="margin: auto;" *ngIf="!countries"></loader>
+  <ejs-maps 
+    id='rn-container'
+    style="height: 900px; width: 900px; margin: auto"
+    *ngIf="countries && countries.length > 0"
+    [legendSettings] = 'legendSettings'>
+    <e-layers>
+      <e-layer 
+        [shapeData]='shapeData'
+        [shapePropertyPath]='shapePropertyPath'
+        [shapeDataPath]='shapeDataPath'
+        [dataSource]='dataSource'
+        [shapeSettings]="shapeSettings">
+      </e-layer>
+    </e-layers>
+  </ejs-maps>
+</div>

@@ -1,0 +1,67 @@
+<div style="margin: auto;">
+
+  <loader [loading]="!countries"></loader>
+  <div *ngIf="countries" class="flex flex-div flex-row">
+    
+    <div class="scroll-table">
+      <table *ngIf="countries">
+        <thead>
+          <th resource="Details.Country"></th>
+          <th class="number" resource="Details.Total"></th>
+          <th class="number" resource="Details.Recovered"></th>
+          <th class="number" resource="Details.Death"></th>
+          <th class="number" resource="Details.Active"></th>
+          <th width="1"></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let country of countries">
+            <td>{{country.code}} {{country.name}}</td>
+            <td class="number">{{country.total | number}}</td>
+            <td class="number">{{country.recovered | number}}</td>
+            <td class="number">{{country.death | number}}</td>
+            <td class="number">{{country.active | number}}</td>
+            <td><input type="checkbox" (change)="updateLineChart(country, $event)"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin: 20px;">
+
+      <!-- Death -->
+      <app-countries-line-chart
+        class="chart"
+        *ngIf="chartDataDeath && chartDataDeath.length > 0"
+        [lineChartData]="chartDataDeath"
+        [lineChartLabels]="chartLabels"
+        [title]="titleDeath">
+      </app-countries-line-chart>
+
+      <!-- Active -->
+      <app-countries-line-chart 
+        *ngIf="chartDataActive && chartDataActive.length > 0"
+        [lineChartData]="chartDataActive"
+        [lineChartLabels]="chartLabels"
+        [title]="titleActive">
+      </app-countries-line-chart>
+
+      <!-- Total -->
+      <app-countries-line-chart 
+        *ngIf="chartDataTotal && chartDataTotal.length > 0"
+        [lineChartData]="chartDataTotal"
+        [lineChartLabels]="chartLabels"
+        [title]="titleTotal">
+      </app-countries-line-chart>
+
+      <!-- Recovered -->
+      <app-countries-line-chart 
+        *ngIf="chartDataRecovered && chartDataRecovered.length > 0"
+        [lineChartData]="chartDataRecovered"
+        [lineChartLabels]="chartLabels"
+        [title]="titleRecover">
+      </app-countries-line-chart>
+    </div>
+
+  </div>
+</div>
+

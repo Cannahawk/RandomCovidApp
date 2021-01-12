@@ -1,0 +1,24 @@
+<div class="flex flex-div">
+  <div class="title">
+    <span resource="Summary.Title"></span>
+  </div>
+</div>
+
+<div class="flex flex-div summary">
+
+  <div class="summary-death">
+    <div resource="Summary.Death"></div>
+    <div *ngIf="death">{{death.total | number}}</div>
+  </div>
+
+  <div class="summary-total">
+    <div resource="Summary.Total"></div>
+    <div *ngIf="confirmed">{{confirmed.total | number}}</div>
+  </div>
+
+  <div class="summary-recovered">
+    <div resource="Summary.Recovered"></div>
+    <div *ngIf="recovered">{{recovered.total | number}}</div>
+  </div>
+  
+</div>
